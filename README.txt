@@ -1,0 +1,2 @@
+NEWS:
+Added openejb artifacts.
