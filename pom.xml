@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.stratwine</groupId>
-	<artifactId>ejb-skeleton</artifactId>
-	<packaging>war</packaging>
+	<artifactId>ejb-learn</artifactId>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>webapp-skeleton Maven Webapp</name>
+	<name>ejb-learn</name>
 	<url>http://maven.apache.org</url>
 
   <repositories>
@@ -45,8 +45,8 @@
   
 
 	<build>
-		<finalName>webapp-skeleton</finalName>
-
+		<finalName>ejb-learn</finalName>
+		<defaultGoal>install</defaultGoal>
 		<plugins>
 
 			<!-- Set Maven to compile for Java 6 -->
@@ -55,8 +55,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.5</source>
+					<target>1.5</target>
 				</configuration>
 
 			</plugin>

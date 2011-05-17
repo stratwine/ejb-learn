@@ -1,8 +1,8 @@
 package foo;
 
-import javax.ejb.Local;
+import javax.ejb.Remote;
 
-@Local
+@Remote
 public interface BarLocal {
 
 	public void sayHello();
