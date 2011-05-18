@@ -6,15 +6,17 @@ import java.util.Properties;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.github.ejblearn.service.GreetingService;
+import com.github.ejblearn.service.GreetingManager;
 
-public class DailyGreetingTest {
 
-	private static InitialContext initialContext;
+public class GreetingManagerImplTest{
+
+private static InitialContext initialContext;
 	
 	@BeforeClass
     public static void setUp() throws Exception {
@@ -25,11 +27,10 @@ public class DailyGreetingTest {
     }
 	
 	@Test
-	public void lookupBasedOnMappedName() throws Exception
+	public void nameInjection() throws NamingException
 	{
-		GreetingService dailyGreeting = (GreetingService) initialContext.lookup("dailyGreetingBeanLocal");
-		assertTrue(dailyGreeting!=null);
+		GreetingManager greetingManager = (GreetingManager)initialContext.lookup("greetingManagerLocal");
+		assertNotNull(greetingManager.getGreetingService());
+		
 	}
-	
-	
 }

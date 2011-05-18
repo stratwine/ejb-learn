@@ -1,18 +1,15 @@
 package com.github.ejblearn.service.impl;
 
-import static org.junit.Assert.*;
-
 import java.util.Properties;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.github.ejblearn.service.GreetingService;
-
-public class DailyGreetingTest {
+public class BirthdayGreetingTest {
 
 	private static InitialContext initialContext;
 	
@@ -25,11 +22,8 @@ public class DailyGreetingTest {
     }
 	
 	@Test
-	public void lookupBasedOnMappedName() throws Exception
+	public void mappedNameCannotBeUsedWithLocalLookup() throws NamingException
 	{
-		GreetingService dailyGreeting = (GreetingService) initialContext.lookup("dailyGreetingBeanLocal");
-		assertTrue(dailyGreeting!=null);
+		initialContext.lookup("birthdayGreetingBean");
 	}
-	
-	
 }
