@@ -5,7 +5,7 @@ import javax.ejb.Stateless;
 import com.github.ejblearn.service.Calculator;
 
 
-@Stateless
+@Stateless(mappedName="calc")
 public class CalculatorImpl implements Calculator{
 
 	@Override

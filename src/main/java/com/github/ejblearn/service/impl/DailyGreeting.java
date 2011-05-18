@@ -1,12 +1,14 @@
 package com.github.ejblearn.service.impl;
 
 import javax.ejb.Local;
-import javax.ejb.Stateless;
+import javax.ejb.Remote;
+import javax.ejb.Stateful;
 
 import com.github.ejblearn.service.GreetingService;
 
 @Local(GreetingService.class)
-@Stateless(mappedName="dailyGreetingBean")
+@Remote(GreetingService.class)
+@Stateful(mappedName="dGreeting")
 public class DailyGreeting implements GreetingService{
 
 }
