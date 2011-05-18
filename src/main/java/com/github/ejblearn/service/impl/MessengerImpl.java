@@ -7,7 +7,7 @@ import javax.ejb.Stateless;
 import com.github.ejblearn.service.Messenger;
 
 @Local(Messenger.class)
-@Stateless(name="messengerBean", mappedName="msgBean")
+@Stateless(name="messengerBean")
 public class MessengerImpl implements Messenger{
 
 }
