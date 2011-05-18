@@ -13,7 +13,7 @@ import org.junit.Test;
 import com.github.ejblearn.service.GreetingService;
 
 @Local(GreetingService.class)
-@Stateless(mappedName="birthdayGreetingBean")
+@Stateless(name="birthdayGreetingBean")
 public class BirthdayGreeting implements GreetingService {
 	
 	
