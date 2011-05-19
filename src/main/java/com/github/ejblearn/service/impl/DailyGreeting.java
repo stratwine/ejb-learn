@@ -6,7 +6,7 @@ import javax.ejb.Stateless;
 import com.github.ejblearn.service.GreetingService;
 
 @Remote(GreetingService.class)
-@Stateless(mappedName="dailyGreetingBean")
+@Stateless(name="dailyGreetingBean")
 public class DailyGreeting implements GreetingService{
 
 }

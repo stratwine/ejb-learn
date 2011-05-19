@@ -1,15 +1,17 @@
 package com.github.ejblearn.service.impl;
 
-import javax.annotation.Resource;
+import javax.ejb.EJB;
+import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
 import com.github.ejblearn.service.GreetingManager;
 import com.github.ejblearn.service.GreetingService;
 
-@Stateless
+@Remote(GreetingManager.class)
+@Stateless(mappedName="greetingManager")
 public class GreetingManagerImpl implements GreetingManager{
 
-	@Resource(name="birthdayGreetingBean")
+	@EJB(beanName="dailyGreetingBean")
 	GreetingService greetingService;
 
 	public GreetingService getGreetingService() {

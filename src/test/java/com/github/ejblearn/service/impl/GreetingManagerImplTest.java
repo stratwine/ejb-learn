@@ -29,7 +29,7 @@ private static InitialContext initialContext;
 	@Test
 	public void nameInjection() throws NamingException
 	{
-		GreetingManager greetingManager = (GreetingManager)initialContext.lookup("greetingManagerLocal");
+		GreetingManager greetingManager = (GreetingManager)initialContext.lookup("greetingManager");
 		assertNotNull(greetingManager.getGreetingService());
 		
 	}
